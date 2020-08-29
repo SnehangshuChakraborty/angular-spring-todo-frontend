@@ -1,0 +1,11 @@
+<table border="1">
+    <caption>Things I want to do</caption>
+    <tr>
+        <th>Id</th>
+        <th>Description</th>
+    </tr>
+    <tr *ngFor="let todo of todos">
+        <td>{{todo.id}}</td>
+        <td>{{todo.description}}</td>
+    </tr>
+</table>
