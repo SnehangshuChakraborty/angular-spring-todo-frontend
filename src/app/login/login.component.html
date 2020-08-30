@@ -1,11 +1,12 @@
-<div>
-    <small *ngIf=isInvalidCredentials>{{errorMessage}}</small>
-</div>
-<div> 
-    name: <input type="text" name="username" [(ngModel)]="username">
-    password: <input type="password" name="password" value="{{password}}">
-</div>
-<div>
-    <button (click)=handleLogin()>Login</button>
+<h2>Welcome to the My to-do</h2><br>
+<h3>A simple to-do app created with all the love using Angular and Spring but first things first</h3><br>
+<h3>Login! </h3>
+<div class="container">
+    <div class="alert alert-warning" *ngIf=isInvalidCredentials>{{errorMessage}}</div>
+    <div> 
+        name    : <input type="text" name="username" [(ngModel)]="username">
+        password    : <input type="password" name="password" value="{{password}}">
+        <button (click)=handleLogin() class="btn btn-success">Login</button>
+    </div>
 </div>
 

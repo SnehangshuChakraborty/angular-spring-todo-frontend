@@ -1,11 +1,17 @@
-<table border="1">
-    <caption>Things I want to do</caption>
-    <tr>
-        <th>Id</th>
-        <th>Description</th>
-    </tr>
-    <tr *ngFor="let todo of todos">
-        <td>{{todo.id}}</td>
-        <td>{{todo.description}}</td>
-    </tr>
-</table>
+<h1>Things I want to do</h1>
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Has it been accomplished?</th>
+            <th>Target Date</th>
+        </tr>
+        <tr *ngFor="let todo of todos">
+            <td>{{todo.id}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.isComplete}}</td>
+            <td>{{todo.etaDate | date}}</td>
+        </tr>
+    </table>
+</div>
