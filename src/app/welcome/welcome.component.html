@@ -3,3 +3,11 @@
     <p>Hi {{name}}, you have logged in successfully</p><br>
     To manage your Todos, click <a routerLink="/todos">here</a>
 </div>
+<div class="container">
+    Click this button because I told you so... 
+    <button (click)="getCustomisedMessage()" class="btn btn-success">get a message from Spring code</button>
+</div>
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h2>Your customised Message</h2>
+    {{welcomeMessageFromService}}
+</div>
